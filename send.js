@@ -2,7 +2,9 @@
 
 var amqp = require('amqplib/callback_api');
 
-amqp.connect('amqp://172.17.0.4', function(err, conn) {
+//'amqp://107.22.147.206:5672'
+amqp.connect('amqp://localhost:38197', function(err, conn) {
+
   conn.createChannel(function(err, ch) {
     var q = 'hello';
 
